@@ -8,25 +8,28 @@ public class MenuService
 
     public void CreateUserDialog()
     {
-        Console.Clear();
 
         User user = new();
 
+        // Input: FirstName
         Console.WriteLine("Enter your first name:");
         user.FirstName = Console.ReadLine()!;
 
+        // Input: LastName
         Console.WriteLine("Enter your last name:");
         user.LastName = Console.ReadLine()!;
 
+        // Input: Email
         Console.WriteLine("Enter your email:");
         user.Email = Console.ReadLine()!;
+        Console.WriteLine("");
 
+        // Adding inputs to list as single user
         _userService.Add(user);
     }
 
     public void ViewAllUserDialog() 
     {
-        Console.Clear();
 
         var users = _userService.GetAll();
 
@@ -38,6 +41,5 @@ public class MenuService
             Console.WriteLine("");
         }
 
-        Console.ReadKey();
     }
 }

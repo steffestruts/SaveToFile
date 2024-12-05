@@ -4,6 +4,6 @@ var menuService = new MenuService();
 
 while (true)
 {
-    menuService.CreateUserDialog();
     menuService.ViewAllUserDialog();
+    menuService.CreateUserDialog();
 }

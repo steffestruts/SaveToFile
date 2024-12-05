@@ -5,7 +5,7 @@ namespace MainApp.Services;
 public class UserService
 {
     private List<User> _users = [];
-    private readonly FileService _fileService = new FileService();
+    private readonly FileService _fileService = new(@"c:\projekt", "users.json");
 
     public void Add(User user) 
     {
@@ -19,3 +19,5 @@ public class UserService
         return _users;
     }
 }
+
+
