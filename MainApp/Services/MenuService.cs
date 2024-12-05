@@ -30,9 +30,10 @@ public class MenuService
 
     public void ViewAllUserDialog() 
     {
-
+        // Fetching all users
         var users = _userService.GetAll();
 
+        // Loop with foreach and display users one by one
         foreach (var user in users)
         {
             Console.WriteLine($"{"Id:", -15}{user.Id}");
